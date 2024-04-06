@@ -40,7 +40,7 @@ export const data = [
     name: 'jujutsu_kaisen',
     image: {
       original:
-        'https://static.wikia.nocookie.net/jujutsu-kaisen/images/8/88/Anime_Key_Visual_2.png/revision/latest?cb=20201212034001',
+        'https://static.wikia.nocookie.net/jujutsu-kaisen/images/8/88/Anime_Key_Visual_2.png',
     },
     kind: 'TV',
     episodes: 24,
