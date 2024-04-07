@@ -19,7 +19,47 @@ const AnimeCard: React.FC<AnimeCart> = ({
   episodes_aired,
 }) => {
   return (
-    <div className="max-w-sm rounded relative w-full">
+    <Card isFooterBlurred radius="lg" className="border-none cursor-pointer">
+      <div className="relative h-[37vh] w-full">
+        <NextImage alt={name} className="bg-cover rounded-lg" src={url} fill />
+      </div>
+
+      <CardFooter className="text-white flex flex-col mt-auto">
+        <div className="w-full flex justify-between">
+          <b>{name}</b>
+          <p>{kind}</p>
+        </div>
+        <div className="flex gap-4 w-full mt-2">
+          <div className="flex">
+            <Image
+              src="./episodes.svg"
+              alt="episodes"
+              width={20}
+              height={20}
+              className="object-contain"
+            />
+            <p className="ml-1">{episodes || episodes_aired}</p>
+          </div>
+          <div className="flex">
+            <Image
+              src="./star.svg"
+              alt="star"
+              width={18}
+              height={18}
+              className="object-contain"
+            />
+            <p className="ml-1">{score}</p>
+          </div>
+        </div>
+      </CardFooter>
+    </Card>
+  );
+};
+
+export default AnimeCard;
+
+{
+  /* <div className="max-w-sm rounded relative w-full">
       <div className="relative w-full h-[37vh]">
         <NextImage src={url} alt={name} fill className="rounded-xl" />
       </div>
@@ -57,8 +97,5 @@ const AnimeCard: React.FC<AnimeCart> = ({
           </div>
         </div>
       </div>
-    </div>
-  );
-};
-
-export default AnimeCard;
+    </div> */
+}

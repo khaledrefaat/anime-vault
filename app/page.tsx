@@ -3,6 +3,7 @@ import styles from './page.module.css';
 import Hero from '@/components/Hero';
 import { data } from './_data';
 import AnimeCard from '@/components/AnimeCard';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
       <main className="bg-black/90">
         <div className="px-16 py-8">
           <h3 className="text-3xl text-white">Explore Anime</h3>
-          <div className="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10">
+          <section className="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10">
             {data.map(anime => (
               <AnimeCard
                 episodes={anime.episodes}
@@ -23,9 +24,10 @@ export default function Home() {
                 episodes_aired={anime.episodes_aired}
               />
             ))}
-          </div>
+          </section>
         </div>
       </main>
+      <Footer />
     </>
   );
 }
